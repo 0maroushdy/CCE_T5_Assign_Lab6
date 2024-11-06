@@ -1,5 +1,7 @@
 package Frontend;
 
+import java.awt.Color;
+
 /**
  *
  * @author Omar
@@ -22,21 +24,58 @@ public class MainPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btNightM = new javax.swing.JToggleButton();
+        jColorChooser1 = new javax.swing.JColorChooser();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btNightM.setBackground(new java.awt.Color(51, 51, 51));
+        btNightM.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btNightM.setForeground(new java.awt.Color(204, 204, 204));
+        btNightM.setText("Night Mode");
+        btNightM.setBorder(null);
+        btNightM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btNightMActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1073, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jColorChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btNightM, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(740, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 556, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jColorChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 355, Short.MAX_VALUE)
+                .addComponent(btNightM, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btNightMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNightMActionPerformed
+        // TODO add your handling code here:
+        if(btNightM.isSelected()){
+            this.getContentPane().setBackground(new Color(40, 40, 50));
+//            btNightM.setBackground(new Color(40, 40, 50));
+            
+        }else{
+            this.getContentPane().setBackground(new Color(240, 240, 250));
+
+        }
+
+    }//GEN-LAST:event_btNightMActionPerformed
 
     /**
      * @param args the command line arguments
@@ -74,5 +113,7 @@ public class MainPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btNightM;
+    private javax.swing.JColorChooser jColorChooser1;
     // End of variables declaration//GEN-END:variables
 }
