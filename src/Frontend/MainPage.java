@@ -239,21 +239,21 @@ public class MainPage extends javax.swing.JFrame {
         //------------------------------
         
         //init values
-        int x = 10;
-        int y = 10;
-        Double radius = 50.5;
-        Color color = Color.BLUE;
-        // the Jframe
-        Graphics g;
-        mainCanv.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.setColor(color);
-        g2d.fillOval(x, y, radius * 2, radius * 2);
+//        int x = 10;
+//        int y = 10;
+//        Double radius = 50.5;
+//        Color color = Color.BLUE;
+//        // the Jframe
+//        Graphics g;
+//        mainCanv.paintComponent(g);
+//        Graphics2D g2d = (Graphics2D) g;
+//        g2d.setColor(color);
+//        g2d.fillOval(x, y, radius * 2, radius * 2);
 
         
         
     }//GEN-LAST:event_jButton1MouseClicked
-
+    
     
 
     //-------------------------------------

@@ -1,5 +1,6 @@
 package minipaint;
 
+import Backend.NewCircle;
 import Frontend.MainPage;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -25,7 +26,17 @@ public class MiniPaint {
         fr1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr1.setLocationRelativeTo(null);
         
+        int x = 10;
+        int y = 10;
+        Double radius = 50.5;
+        Color color = Color.BLUE;
         
+        // the Jframe
+        NewCircle nc = new NewCircle(x, y, radius, color);
+        fr1.add(nc);
+        fr1.setVisible(true);
+
+
         
         
 //        JPanel mainPnl = new JPanel();
