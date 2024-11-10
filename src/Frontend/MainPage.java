@@ -1,6 +1,9 @@
 package Frontend;
 
-import java.awt.Color;
+import Backend.Circle;
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
 
 /**
  *
@@ -74,6 +77,11 @@ public class MainPage extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Vorlesta", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Circle");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -199,6 +207,56 @@ public class MainPage extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:  
+        JTextField xField = new JTextField(5);
+        JTextField yField = new JTextField(5);
+        JTextField radiusField = new JTextField(5);
+
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("X Position:"));
+        panel.add(xField);
+        panel.add(Box.createHorizontalStrut(15)); // Spacer
+        panel.add(new JLabel("Y Position:"));
+        panel.add(yField);
+        panel.add(Box.createHorizontalStrut(15)); // Spacer
+        panel.add(new JLabel("Radius:"));
+        panel.add(radiusField);
+
+        int result = JOptionPane.showConfirmDialog(null, panel, 
+                "Enter Circle Properties", JOptionPane.OK_CANCEL_OPTION);
+        Map<String, Double> properties = new HashMap<>();
+        if (result == JOptionPane.OK_OPTION) {
+            try {
+                properties.put("x", Double.parseDouble(xField.getText()));
+                properties.put("y", Double.parseDouble(yField.getText()));
+                properties.put("radius", Double.parseDouble(radiusField.getText()));
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Please enter valid numbers.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        
+        //------------------------------
+        
+        //init values
+        int x = 10;
+        int y = 10;
+        Double radius = 50.5;
+        Color color = Color.BLUE;
+        // the Jframe
+        Graphics g;
+        mainCanv.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(color);
+        g2d.fillOval(x, y, radius * 2, radius * 2);
+
+        
+        
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    
+
+    //-------------------------------------
     /**
      * @param args the command line arguments
      */
