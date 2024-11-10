@@ -9,8 +9,15 @@ import java.util.Map;
  */
 public class Circle extends ShapeObject {
     
-    public Circle(Point position, Map<String, Double> properties, Color color, Color fillColor) {
+    public Circle(Point position, Map<String, Double> properties, Color color, Color fillColor, DrawingBase database ) {
+        
         super(position, properties, color, fillColor);
+        super.setUniqueName( generateUniqueName(database.getCircleCounter()));
+        
+    }
+    
+    public String generateUniqueName(int serial){
+        return "Circle" + String.format("%02d", serial);
     }
     
    

@@ -14,14 +14,17 @@ public abstract class ShapeObject implements Shape {
     private Map<String, Double> properties;
     private Color color;
     private Color fillColor;
+    private String uniqueName = null;
     
     // ------------------**Constractor**--------------------
+
     public ShapeObject(Point position, Map<String, Double> properties, Color color, Color fillColor) {
         this.position = position;
         this.properties = properties;
         this.color = color;
         this.fillColor = fillColor;
     }
+
     
     // ------------------**set shape postion**--------------------
     @Override
@@ -64,6 +67,16 @@ public abstract class ShapeObject implements Shape {
         return fillColor;
     }
 
+    // ------------------**redraw the shape on the canvas**--------------------
+
+    public void setUniqueName(String uniqueName) {
+        this.uniqueName = uniqueName;
+    }
+
+    public String getUniqueName() {
+        return uniqueName;
+    }
+    
     // ------------------**redraw the shape on the canvas**--------------------
     @Override
     public void draw(java.awt.Graphics canvas){

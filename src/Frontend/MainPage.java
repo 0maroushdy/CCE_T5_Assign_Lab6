@@ -29,7 +29,7 @@ public class MainPage extends javax.swing.JFrame {
         jPopupMenu2 = new javax.swing.JPopupMenu();
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         btNightM = new javax.swing.JToggleButton();
-        mainCanvac = new javax.swing.JPanel();
+        mainCanv = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -57,16 +57,16 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        mainCanvac.setBackground(new java.awt.Color(255, 255, 255));
+        mainCanv.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout mainCanvacLayout = new javax.swing.GroupLayout(mainCanvac);
-        mainCanvac.setLayout(mainCanvacLayout);
-        mainCanvacLayout.setHorizontalGroup(
-            mainCanvacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout mainCanvLayout = new javax.swing.GroupLayout(mainCanv);
+        mainCanv.setLayout(mainCanvLayout);
+        mainCanvLayout.setHorizontalGroup(
+            mainCanvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 713, Short.MAX_VALUE)
         );
-        mainCanvacLayout.setVerticalGroup(
-            mainCanvacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        mainCanvLayout.setVerticalGroup(
+            mainCanvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 358, Short.MAX_VALUE)
         );
 
@@ -74,6 +74,11 @@ public class MainPage extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Vorlesta", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Circle");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(0, 153, 153));
         jButton2.setFont(new java.awt.Font("Vorlesta", 0, 12)); // NOI18N
@@ -137,7 +142,7 @@ public class MainPage extends javax.swing.JFrame {
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(mainCanvac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mainCanv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
@@ -152,7 +157,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(mainCanvac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(mainCanv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btNightM, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -187,6 +192,12 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,7 +248,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
-    private javax.swing.JPanel mainCanvac;
+    private javax.swing.JPanel mainCanv;
     // End of variables declaration//GEN-END:variables
 
     public void setMaximizedBounds(int WIDTH, int HIGHT) {
