@@ -48,23 +48,25 @@ public class DrawingBase implements DrawingEngine {
     
     //------------------**Functions**------------------
     @Override
-    public void addShape(Shape shape) {
-        data.add(null);
+    public void addShape(ShapeObject shape) {
+        data.add(shape);
     }
 
     @Override
-    public void removeShape(Shape shape) {
+    public void removeShape(ShapeObject shape) {
+        data.remove(shape);
 //
     }
 
     @Override
-    public Shape[] getShapes() {
+    public ShapeObject[] getShapes() {
 //
-    return null;
+    return data.toArray(new ShapeObject[0]);
     }
 
     @Override
     public void refresh(Graphics canvas) {
+        
 //
      }
     
