@@ -1,4 +1,4 @@
-package minipaint;
+package Backend;
 import java.awt.*;
 import java.util.Map;
 
